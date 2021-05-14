@@ -9,7 +9,7 @@ echo "                |_|                                                "
 echo
 echo -e "\e[0m"
 echo "                     --- Welcome to OpenVoiceOS ---              "
-echo "                         Mycroft Edition v0.1.0                  "
+echo "                         Neon Edition v0.0.1                  "
 echo
 echo "Mycroft Tool COMMANDs:"
 echo "  mycroft-cli-client        Command line client, useful for debugging"

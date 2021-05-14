@@ -1,0 +1,6 @@
+config BR2_PACKAGE_NEON_SERVICE
+	bool "neon-service"
+	help
+	  Start the Neon A.I. software as service.
+
+	  https://neon.ai/

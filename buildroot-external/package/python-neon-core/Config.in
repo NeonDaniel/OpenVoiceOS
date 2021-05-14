@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PYTHON_NEON_CORE
+	bool "python-neon-core"
+	help
+	  Neon Core, the Neon Artificial Intelligence platform.
+	  packaged as importable library. 
+
+	  https://neon.ai/
