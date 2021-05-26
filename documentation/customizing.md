@@ -4,6 +4,11 @@ with creating a custom image.
 ## Adding Extra Files
 Additional files can be arbitrarily added to the image by placing them in `buildroot-external/rootfs-overlay`.
 
+## Adding Packages
+Additional packages may be added to `buildroot-external/package`. An added Python package should have a 
+`Config.in`, `{package}.mk`, and optionally a `{package}.hash` file. The `.mk` file contains references to where the 
+package should be built from. The `Config.in` file contains config for the build system. The `hash` file is optional, but
+recommended to catch corrupted downloads or potential MITM attacks.
 
 ## SSH Login Message
 To change what is printed in the terminal when logging in, `buildroot-external/rootfs-overlay/home/mycroft/cli_login.sh`

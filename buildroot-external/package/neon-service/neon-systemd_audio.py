@@ -15,16 +15,19 @@
 # limitations under the License.
 ##########################################################################
 import sdnotify
-from mycroft.audio.__main__ import main
+from neon_audio.__main__ import main
 
 n = sdnotify.SystemdNotifier()
+
 
 def notify_ready():
     n.notify('READY=1')
     print('Startup of Mycroft Audio service complete')
 
+
 def notify_stopping():
     n.notify('STOPPING=1')
     print('Stopping the Mycroft Audio service')
+
 
 main(ready_hook=notify_ready, stopping_hook=notify_stopping)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 ##########################################################################
-# mycroft-systemd_skills.py
+# mycroft-systemd_enclosure.py
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,16 +15,19 @@
 # limitations under the License.
 ##########################################################################
 import sdnotify
-from mycroft.skills.__main__ import main
+from neon_enclosure.client.enclosure.__main__ import main
 
 n = sdnotify.SystemdNotifier()
 
+
 def notify_ready():
     n.notify('READY=1')
-    print('Startup of Mycroft Skills service complete')
+    print('Startup of Mycroft Enclosure service complete')
+
 
 def notify_stopping():
     n.notify('STOPPING=1')
-    print('Stopping the Mycroft Skills service')
+    print('Stopping the Mycroft Enclosure service')
+
 
 main(ready_hook=notify_ready, stopping_hook=notify_stopping)
